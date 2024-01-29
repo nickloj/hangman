@@ -21,9 +21,11 @@ class DisplayManager:
             """)
 
     @staticmethod
-    def new_game():
+    def prompt_new_game():
         play = input('Would you like to play again? (y/n):  ')
-        return play
+        if play.lower() != 'y':
+            print('Thanks for playing! Goodbye.')
+            exit()
 
     def show_game_state(self):
         word_progress = self.game.reveal_letters(self.player.guessed_letters)
