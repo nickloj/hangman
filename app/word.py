@@ -1,16 +1,17 @@
 import random
-from utils import DEFAULT_WORD_LIST
+from app.utils import DEFAULT_WORD_LIST
+
 
 class WordManager:
     _instance = None
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls):
         if not cls._instance:
             cls._instance = super(WordManager, cls).__new__(cls)
         return cls._instance
 
-    def __init__(self, word_list: list = DEFAULT_WORD_LIST) -> None:
-        self.word_list = set(word_list)
+    def __init__(self) -> None:
+        self.word_list = set(DEFAULT_WORD_LIST)
 
     def get_new_word(self) -> str:
         try:
