@@ -16,9 +16,6 @@ class Game:
         else:
             raise ValueError('Not implemented yet')
 
-    def check_guess(self, guess):
-        return
-
     def reveal_letters(self, guessed_letters):
         return ' '.join(letter if letter in guessed_letters
                         else ' _ ' for letter in self.secret)
