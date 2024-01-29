@@ -1,11 +1,5 @@
 import random
-
-
-DEFAULT_WORD_LIST = ["mysql", 'postgresql', "redis", "mongodb", "sqlite",
-                     "oracle", "cassandra", "mariadb", "mssql", "sybase",
-                     "teradata", "informix", "access", "elastic", "couchdb",
-                     "couchbase",  "hbase", "ravendb", "firebase", "dynamodb",]
-
+from utils import DEFAULT_WORD_LIST
 
 class WordManager:
     _instance = None
@@ -16,7 +10,6 @@ class WordManager:
         return cls._instance
 
     def __init__(self, word_list: list = DEFAULT_WORD_LIST) -> None:
-        print(f"Initializing with args: {word_list},")
         self.word_list = set(word_list)
 
     def get_new_word(self) -> str:
