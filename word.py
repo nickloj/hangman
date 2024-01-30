@@ -1,5 +1,5 @@
 import random
-from app.utils import DEFAULT_WORD_LIST
+from utils import DEFAULT_WORD_LIST
 
 
 class WordManager:
