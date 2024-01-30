@@ -1,4 +1,3 @@
-# import data
 from player import Player
 from word import WordManager
 from display import DisplayManager
@@ -6,10 +5,13 @@ from display import DisplayManager
 
 class Game:
 
-    def __init__(self, ui='console'):
-        self.player = Player()
-        self.word_manager = WordManager()
-        self.secret = self.word_manager.get_new_word()
+    def __init__(self,
+                 ui='console',
+                 player: Player = None,
+                 word_manager: WordManager = None):
+
+        self.player = player
+        self.secret = word_manager.get_new_word()
 
         if ui == 'console':
             self.display_manager = DisplayManager(self)
