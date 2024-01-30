@@ -20,7 +20,7 @@ class Game:
 
     def reveal_letters(self, guessed_letters):
         return ' '.join(letter if letter in guessed_letters
-                        else ' _ ' for letter in self.secret)
+                        else '_' for letter in self.secret)
 
     def word_guessed(self, guessed_letters):
         return all(letter in guessed_letters for letter in self.secret)
