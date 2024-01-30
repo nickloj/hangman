@@ -1,6 +1,6 @@
 import unittest
 from collections import Counter
-from app.word import WordManager, DEFAULT_WORD_LIST
+from word import WordManager, DEFAULT_WORD_LIST
 
 
 class TestWordManager(unittest.TestCase):
