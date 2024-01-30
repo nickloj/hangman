@@ -8,6 +8,12 @@ programming languages: Python, Golang, or JavaScript.
 
 # Solution:
 
+To play the game, run the main.py from the root folder.
+
+```shell
+python main.py
+```
+
 ## Tests
 
 To run the tests, execute the following command from the root folder.
